@@ -5,3 +5,6 @@ __pycache__/
 
 #Ignore credentials file
 chromeEmail/credentials.py
+
+#Ignore chromedriver
+assets/chromedriver

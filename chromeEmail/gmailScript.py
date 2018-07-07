@@ -10,7 +10,7 @@ chromedriver_location = Settings.chromedriver_location
 
 driver = webdriver.Chrome(chromedriver_location)
 
-url = 'https://www.google.com/accounts/Login?hl=ja&continue=http://www.google.co.jp/'
+url = 'https://www.google.com/accounts/Login?hl=en&continue=http://www.google.com/'
 driver.get(url)
 
 driver.find_element_by_id("identifierId").send_keys(credentials.email)

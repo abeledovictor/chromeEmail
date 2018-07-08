@@ -58,7 +58,7 @@ email = 'put.your.email.here@gmail.com'
 password = 'here.goes.your.password'
 ```
 After that, open ```assets/csvSource.csv```. Add the name and email of the people you want to reach with the program. **Do NOT** change the first row (The one with **Name** and **Email** written in it). Save your changes keeping *.csv* format.
-Then open ```exampleList.py```, replace ```listBody``` with the text you want to send. You can use ```{}``` notation to reference the **name** at the **.csv** associated to that specific recipient. Replace the subject at ```listSubject```.
+Then open ```exampleList.py```, replace ```listBody``` with the text you want to send. You can use ```{0}``` notation to reference the **name** at the **.csv** associated to that specific recipient. Replace the subject at ```listSubject```.
 ```
 import credentials
 from login import login
@@ -79,8 +79,8 @@ with open('../assets/csvSource.csv', 'r') as csvFile:
     login(driver,credentials.email,credentials.password)
 
     #Write email
-    #if you add {} in body, it will replace it with the name written at csv file
-    listBody = "Hello {} i'm a csv email"
+    #if you add {0} in body, it will replace it with the name written at csv file
+    listBody = "Hello {0} i'm a csv email"
     #you can omit the subject
     listSubject = "here at csv world"
     listWriteAndSend(driver, csvFile, listBody, listSubject)

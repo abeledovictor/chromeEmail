@@ -17,8 +17,8 @@ with open('../assets/csvSource.csv', 'r') as csvFile:
     login(driver,credentials.email,credentials.password)
 
     #Write email
-    #if you add {} in body, it will replace it with the name written at csv file
-    listBody = "Hello {} i'm a csv email"
+    #if you add {0} in body, it will replace it with the name written at csv file
+    listBody = "Hello {0} i'm a csv email"
     #you can omit the subject
     listSubject = "here at csv world"
     listWriteAndSend(driver, csvFile, listBody, listSubject)

@@ -89,4 +89,4 @@ with open('../assets/csvSource.csv', 'r') as csvFile:
     endSession(driver)
 
 ```
-Finally open terminal pointing to chromeEmail folder and run ```python exampleList.py```
+Finally, open terminal pointing to chromeEmail folder and run ```python exampleList.py```

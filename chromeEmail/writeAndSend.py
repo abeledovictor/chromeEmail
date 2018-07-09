@@ -14,5 +14,6 @@ def writeAndSend(driver, email):
     time.sleep(random.choice([10,15,20]))
     #Send email
     driver.find_element_by_xpath("//div[text()='Send']").click()
+    print('E-mail to: {} was sent successfully'.format(email.to))
     #Another stall
     time.sleep(random.choice([15,22,30]))
